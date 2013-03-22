@@ -1793,7 +1793,7 @@ class Base:
                 self.withdraw_app()
                 return True
         self.settings_save()
-        self.artwork.artwork_save_cache()
+        self.artwork.cache.save()
         if self.config.as_enabled:
             self.scrobbler.save_cache()
         if self.conn and self.config.stop_on_exit:
